@@ -1,9 +1,9 @@
-import Layout from '../components/Layout';
+import BaseLayout from '../components/_layouts/BaseLayout/BaseLayout';
 
 const IndexPage = () => (
-    <Layout title="Home | Next.js + TypeScript Example">
+    <BaseLayout>
         <h1>Hello there</h1>
-    </Layout>
+    </BaseLayout>
 );
 
 export default IndexPage;
