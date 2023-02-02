@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 
     return {
         paths: paths.map((slug) => ({ params: { slug } })),
-        fallback: true,
+        fallback: false,
     }
 }
 
@@ -25,6 +25,7 @@ export async function getStaticProps(context) {
     const { slug = "" } = context.params
     const post = await client.fetch(`*[_type == "post" && slug.current == $slug][0]{title, "name": author->name}`, { slug })
     console.log(post);
+    console.log("test");
     
     return {
         props: {
