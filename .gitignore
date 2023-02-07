@@ -26,3 +26,10 @@ out/
 
 # Storybook
 storybook-static/
+
+# Vercel
+.vercel
+
+# Env
+.env
+.env.local
