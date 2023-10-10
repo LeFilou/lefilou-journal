@@ -3,10 +3,12 @@ const toPath = (_path) => path.join(process.cwd(), _path);
 
 module.exports = {
   stories: ['../components/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
+
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
   ],
+
   /**
    * Typescript configuration handling
    * @see https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
@@ -22,6 +24,7 @@ module.exports = {
           prop.parent ? !/node_modules/.test(prop.parent.fileName) : true,
     },
   },
+
   webpackFinal: async (config) => {
 
 
@@ -44,4 +47,13 @@ module.exports = {
       },
     };
   },
+
+  framework: {
+    name: '@storybook/nextjs',
+    options: {}
+  },
+
+  docs: {
+    autodocs: true
+  }
 };
