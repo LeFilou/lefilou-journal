@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Widget/Sidebar Primary 1`] = `
+.emotion-0 {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 40;
+  height: 100vh;
+  width: 24rem;
+  --tw-translate-x: -100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  .emotion-0 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+  }
+}
+
+@media (min-width: 640px) {
+  .emotion-0 {
+    --tw-translate-x: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
+.emotion-1 {
+  margin: auto;
+  height: 100%;
+  width: 83.333333%;
+  overflow-y: auto;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.emotion-2 {
+  position: absolute;
+  bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.emotion-3 {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.emotion-4 {
+  font-family: Abril Fatface;
+  font-size: 4.5rem;
+  line-height: 1;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
+.emotion-5 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.emotion-6 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
+.emotion-7 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
+.emotion-8 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+<aside
+  class="emotion-0"
+>
+  <div
+    class="emotion-1"
+  >
+    <div
+      class="emotion-2"
+    >
+      <div
+        class="emotion-3"
+      >
+        <span
+          class="emotion-4"
+        >
+          Lefilou
+        </span>
+        <span
+          class="emotion-5"
+        >
+          Lefilou's personnal journal
+        </span>
+      </div>
+      <ul>
+        <li
+          class="emotion-6"
+        >
+          <a
+            href="#"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class="emotion-7"
+        >
+          <a
+            href="#"
+          >
+            About
+          </a>
+        </li>
+      </ul>
+      <span
+        class="emotion-8"
+      >
+        Salim Fliou
+      </span>
+    </div>
+  </div>
+</aside>
+`;

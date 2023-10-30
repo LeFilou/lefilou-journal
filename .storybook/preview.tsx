@@ -1,6 +1,6 @@
 import createCache from '@emotion/cache';
 import { CacheProvider, Global } from '@emotion/react';
-import { GlobalStyles as BaseStyles } from 'twin.macro';
+import GlobalStyles from '../styles/GlobalStyles';
 
 const cache = createCache({
     prepend: true,
@@ -29,7 +29,7 @@ export const parameters = {
 export const decorators = [
     (Story) => (
         <CacheProvider value={cache}>
-            <BaseStyles />
+            <GlobalStyles />
             <Global styles={{ html: { scrollBehavior: 'smooth' } }} />
             <Story />
         </CacheProvider>
