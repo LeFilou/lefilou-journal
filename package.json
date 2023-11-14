@@ -20,7 +20,9 @@
     "@emotion/react": "^11.11.1",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.11.0",
-    "@sanity/client": "^6.8.5",
+    "@sanity/vision": "^3.0.0",
+    "sanity": "^3.0.0",
+    "styled-components": "^5.2.0",
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
