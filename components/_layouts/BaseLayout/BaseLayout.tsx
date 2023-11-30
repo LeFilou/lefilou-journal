@@ -14,7 +14,9 @@ const BaseLayout = ({ children }: BaseLayoutProps) => (
             githubPage="https://github.com/LeFilou"
             linkedinPage="https://www.linkedin.com/in/salim-fliou/"
         />
-        <main tw="lg:ml-96 md:ml-80 md:mt-0 mt-80 ml-0 ">{children}</main>
+        <main tw="lg:ml-96 md:ml-80 md:mt-0 mt-80 ml-0 p-10 md:p-20">
+            {children}
+        </main>
     </>
 );
 

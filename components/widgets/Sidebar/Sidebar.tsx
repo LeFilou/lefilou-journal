@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 export interface SidebarProps {
@@ -9,18 +10,20 @@ export interface SidebarProps {
 }
 
 const Sidebar = ({ blogName, description, blogAuthor, linkedinPage, githubPage }: SidebarProps) => (
-    <aside tw="fixed top-0 left-0 z-40 bg-gray-50 dark:bg-gray-800 lg:w-96 md:w-80 md:h-screen h-80 w-full">
+    <aside tw="fixed top-0 left-0 z-40 bg-gray-800 lg:w-96 md:w-80 md:h-screen h-80 w-full">
             <div tw="md:absolute md:bottom-5 w-full h-full md:h-fit flex flex-col justify-center items-center self-center">
                 <div tw="flex flex-col mb-5">
-                    <span tw="text-7xl font-bold text-gray-100 font-abril">{blogName}</span>
+                    <span tw="text-7xl font-bold text-gray-100 font-abril">
+                        <Link href="/">{blogName}</Link>
+                    </span>
                     <span tw="text-2xl my-3 text-gray-400">{description}</span>
                 </div>
                 <ul>
                     <li tw="text-xl my-2 text-gray-100">
-                        <a href="#">Home</a>
+                        <Link href="/">Home</Link>
                     </li>
                     <li tw="text-xl text-gray-100">
-                        <a href="#">About</a>
+                        <Link href="/about">About</Link>
                     </li>
                 </ul>
                 <span tw="text-2xl mt-4 mb-2 text-gray-400">{blogAuthor}</span>
