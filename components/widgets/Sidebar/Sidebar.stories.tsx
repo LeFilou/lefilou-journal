@@ -20,4 +20,8 @@ Primary.args = {
     blogName: 'Lefilou',
     blogAuthor: 'Salim Fliou',
     description: "Lefilou's personnal journal",
+    sidebarLinks: [
+        { title: 'Home', href: '/' },
+        { title: 'About', href: '/about' },
+    ],
 };

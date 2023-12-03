@@ -9,14 +9,7 @@ exports[`Storyshots Widget/Sidebar Primary 1`] = `
   height: 20rem;
   width: 100%;
   --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-}
-
-@media (prefers-color-scheme: dark) {
-  .emotion-0 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-  }
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
@@ -75,15 +68,6 @@ exports[`Storyshots Widget/Sidebar Primary 1`] = `
 }
 
 .emotion-5 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  --tw-text-opacity: 1;
-  color: rgb(243 244 246 / var(--tw-text-opacity));
-}
-
-.emotion-6 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
@@ -145,7 +129,11 @@ exports[`Storyshots Widget/Sidebar Primary 1`] = `
       <span
         class="emotion-3"
       >
-        Lefilou
+        <a
+          href="/"
+        >
+          Lefilou
+        </a>
       </span>
       <span
         class="emotion-4"
@@ -158,16 +146,16 @@ exports[`Storyshots Widget/Sidebar Primary 1`] = `
         class="emotion-5"
       >
         <a
-          href="#"
+          href="/"
         >
           Home
         </a>
       </li>
       <li
-        class="emotion-6"
+        class="emotion-5"
       >
         <a
-          href="#"
+          href="/about"
         >
           About
         </a>
