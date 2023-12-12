@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Modules/PostSummary Primary 1`] = `
+.emotion-0 {
+  padding: 1.25rem;
+}
+
+.emotion-1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.emotion-2 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.emotion-3 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+<div
+  class="emotion-0"
+>
+  <h1
+    class="emotion-1"
+  >
+    <a
+      href="post/undefined"
+    >
+      Dummy Article
+    </a>
+  </h1>
+  <span
+    class="emotion-2"
+  >
+    21 July 2023
+  </span>
+  <p
+    class="emotion-3"
+  >
+    Consequat interdum varius sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut consequat semper.
+  </p>
+</div>
+`;

@@ -1,4 +1,3 @@
-/* eslint-disable */
 import Sidebar from './Sidebar';
 import { Meta, StoryObj } from '@storybook/react';
 
