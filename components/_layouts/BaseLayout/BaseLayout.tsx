@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import Sidebar from '../../widgets/Sidebar/Sidebar';
+import Sidebar from '../../widgets/sidebar/Sidebar';
 
 export interface BaseLayoutProps {
     children?: ReactNode;
