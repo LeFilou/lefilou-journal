@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Loader/ComingSoon Primary 1`] = `
+.emotion-0 {
+  display: flex;
+  min-height: 100vh;
+  --tw-translate-y: -2.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .emotion-0 {
+    --tw-translate-y: -5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
+.emotion-1 {
+  margin-bottom: 2rem;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.emotion-2 {
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+<div
+  class="emotion-0"
+>
+  <h1
+    class="emotion-1"
+  >
+    Coming Soon
+  </h1>
+  <p
+    class="emotion-2"
+  >
+    A closer look at my experiences and thoughts in software engineering. Stay tuned !
+  </p>
+</div>
+`;

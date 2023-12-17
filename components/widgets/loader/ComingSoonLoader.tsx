@@ -1,4 +1,4 @@
-const ComingSoon = () => {
+const ComingSoonLoader = () => {
     return (
         <div tw="min-h-screen flex flex-col items-center justify-center p-10 md:-translate-y-20 -translate-y-10">
             <h1 tw="text-5xl text-gray-900 font-bold mb-8 animate-pulse">
@@ -11,4 +11,4 @@ const ComingSoon = () => {
     );
 };
 
-export default ComingSoon;
+export default ComingSoonLoader;
