@@ -1,35 +1,34 @@
-import client from '../../client'
+import { getClient } from '../../lib/sanity.server';
+import { postBySlugQuery, postSlugsQuery } from '../../lib/queries';
 
 const Post = (props) => {
-    const { title = 'Missing title', name = 'Missing name' } = props.post
+    const { title = 'Missing title', author = 'Missing author' } = props.post;
     return (
         <article>
             <h1>{title}</h1>
-            <span>By {name}</span>
+            <span>By {author}</span>
         </article>
-    )
-}
+    );
+};
 
 export async function getStaticPaths() {
-    const paths = await client.fetch(
-        `*[_type == "post" && defined(slug.current)][].slug.current`
-    )
-
+    const paths = await getClient().fetch(postSlugsQuery);
     return {
         paths: paths.map((slug) => ({ params: { slug } })),
         fallback: false,
-    }
+    };
 }
 
 export async function getStaticProps(context) {
-    const { slug = "" } = context.params
-    const post = await client.fetch(`*[_type == "post" && slug.current == $slug][0]{title, "name": author->name}`, { slug })
-    console.log(post);
+    const { slug = '' } = context.params;
+    const post = await getClient().fetch(postBySlugQuery,
+        { slug },
+    );
     return {
         props: {
-            post
-        }
-    }
+            post,
+        },
+    };
 }
 
-export default Post
+export default Post;

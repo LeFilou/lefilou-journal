@@ -1,21 +1,24 @@
-import client from '../client';
+import { getClient } from '../lib/sanity.server';
 import { PortableText } from '@portabletext/react';
 import { PortableTextBlock } from '@sanity/types';
 import { GetStaticProps } from 'next';
 import { PortableTextReactComponents } from '@portabletext/react/src/types';
+import { aboutQuery } from '../lib/queries';
 
 export interface AboutPageProps {
     portableTextBlocks: PortableTextBlock[];
 }
 
 const AboutPage = ({ portableTextBlocks }: AboutPageProps) => {
-    return <PortableText value={portableTextBlocks} components={componentsRenderer} />;
+    return (
+        <PortableText
+            value={portableTextBlocks}
+            components={componentsRenderer}
+        />
+    );
 };
 export const getStaticProps: GetStaticProps<AboutPageProps> = async () => {
-    const portableTextBlocks: PortableTextBlock[] = await client.fetch(
-        `*[_type == "about"][0].about`,
-        {},
-    );
+    const portableTextBlocks: PortableTextBlock[] = await getClient().fetch(aboutQuery,);
     return { props: { portableTextBlocks } };
 };
 

@@ -33,3 +33,4 @@ storybook-static/
 # Env
 .env
 .env.local
+.env.development
