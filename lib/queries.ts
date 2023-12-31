@@ -21,6 +21,6 @@ export const postSlugsQuery = `
 
 export const postBySlugQuery = `
 *[_type == "post" && slug.current == $slug][0] {
-  ${postFields}, "author": author->name
+  ${postFields}, "author": author->name, body
 }
 `;

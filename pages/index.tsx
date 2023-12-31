@@ -13,9 +13,7 @@ export default function IndexPage({ posts }: IndexPageProps) {
     return posts.length == 0 ? (
         <ComingSoonLoader />
     ) : (
-        <div tw="p-10 md:p-20">
-            <PostSummaryList posts={posts} />
-        </div>
+        <PostSummaryList posts={posts} />
     );
 }
 

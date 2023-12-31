@@ -18,7 +18,7 @@ const AboutPage = ({ portableTextBlocks }: AboutPageProps) => {
     );
 };
 export const getStaticProps: GetStaticProps<AboutPageProps> = async () => {
-    const portableTextBlocks: PortableTextBlock[] = await getClient().fetch(aboutQuery,);
+    const portableTextBlocks: PortableTextBlock[] = await getClient().fetch(aboutQuery);
     return { props: { portableTextBlocks } };
 };
 
