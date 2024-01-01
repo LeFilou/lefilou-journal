@@ -1,4 +1,4 @@
-import {defineType, defineArrayMember} from 'sanity'
+import {defineType, defineArrayMember, defineField} from 'sanity'
 
 export default defineType({
   title: 'Block Content',
@@ -19,11 +19,10 @@ export default defineType({
       lists: [{title: 'Bullet', value: 'bullet'}],
       marks: {
         decorators: [
-          { "title": "Strong", "value": "strong" },
-          { "title": "Emphasis", "value": "em" },
-          { "title": "Code", "value": "code" },
-          { "title": "Underline", "value": "underline" },
-          { "title": "Strike", "value": "strike-through" },
+          {title: 'Strong', value: 'strong'},
+          {title: 'Emphasis', value: 'em'},
+          {title: 'Underline', value: 'underline'},
+          {title: 'Strike', value: 'strike-through'},
         ],
         annotations: [
           {
@@ -44,6 +43,23 @@ export default defineType({
     defineArrayMember({
       type: 'image',
       options: {hotspot: true},
+    }),
+    defineField({
+      title: 'Code with all options',
+      name: 'codeField',
+      type: 'code',
+      options: {
+        language: "java",
+        languageAlternatives: [
+          { title: "Java", value: "java" },
+          { title: "Javascript", value: "javascript" },
+          { title: "TypeScript", value: "typescript" },
+          { title: "Tsx", value: "tsx" },
+          { title: "Kotlin", value: "kotlin" },
+          { title: "Yaml", value: "yaml" },
+        ],
+        withFilename: true,
+      },
     }),
   ],
 })

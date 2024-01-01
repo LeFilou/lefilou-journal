@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import Sidebar from '../../widgets/sidebar/Sidebar';
+import Sidebar from '@/components/widgets/sidebar/Sidebar';
 
 export interface BaseLayoutProps {
     children?: ReactNode;
@@ -18,7 +18,7 @@ const BaseLayout = ({ children }: BaseLayoutProps) => (
                 { title: 'About', href: '/about' },
             ]}
         />
-        <main tw="lg:ml-96 md:ml-80 md:mt-0 mt-80 ml-0 p-10 md:p-20">
+        <main tw="lg:ml-96 md:ml-80 md:mt-0 mt-80 ml-0 p-10 md:py-20 md:px-36">
             {children}
         </main>
     </>
