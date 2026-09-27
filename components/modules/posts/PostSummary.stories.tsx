@@ -1,4 +1,4 @@
-import { StoryObj } from '@storybook/react';
+import { StoryObj } from '@storybook/nextjs';
 import PostSummary from './PostSummary';
 
 
@@ -7,7 +7,6 @@ const meta = {
     component: PostSummary,
     parameters: {
         layout: 'fullscreen',
-        storyshots: true,
     },
 };
 

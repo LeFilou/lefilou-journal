@@ -1,6 +1,6 @@
 import { getClient } from '../../lib/sanity.server';
 import { postBySlugQuery, postSlugsQuery } from '../../lib/queries';
-import { PortableTextBlock } from '@sanity/types';
+import { PortableTextBlock } from '@portabletext/types';
 import { PortableText } from '@portabletext/react';
 import { Post as PostSummary } from '@/model/Post';
 import { RichTextComponents } from '@/components/widgets/RichComponents';
@@ -9,7 +9,7 @@ const Post = (props) => {
     const { title = 'Missing title', body } = props.post;
     return (
         <div>
-            <h1 tw="text-4xl text-gray-800  font-bold">{title}</h1>
+            <h1 className="text-4xl text-gray-800 font-bold">{title}</h1>
             <PortableText value={body} components={RichTextComponents} />
         </div>
     );

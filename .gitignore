@@ -34,3 +34,5 @@ storybook-static/
 .env
 .env.local
 .env.development
+# Next generated types
+next-env.d.ts
