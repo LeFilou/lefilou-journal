@@ -1,15 +1,5 @@
-import createCache from '@emotion/cache';
-import { CacheProvider, Global } from '@emotion/react';
-import GlobalStyles from '../styles/GlobalStyles';
-
-const cache = createCache({
-    prepend: true,
-    key: 'app',
-    // This disables vendor prefixing in storybook and storyshots snapshots
-    ...((process.env.NODE_ENV === 'development' || 'test') && {
-        stylisPlugins: [],
-    }),
-});
+import { fontVariables } from '../styles/fonts';
+import '../styles/globals.css';
 
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -28,10 +18,8 @@ export const parameters = {
 
 export const decorators = [
     (Story) => (
-        <CacheProvider value={cache}>
-            <GlobalStyles />
-            <Global styles={{ html: { scrollBehavior: 'smooth' } }} />
+        <div className={`${fontVariables} font-sans`}>
             <Story />
-        </CacheProvider>
+        </div>
     )
 ];

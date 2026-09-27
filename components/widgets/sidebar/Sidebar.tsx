@@ -17,27 +17,27 @@ export interface SidebarProps {
 }
 
 const Sidebar = ({ blogName, description, blogAuthor, linkedinPage, githubPage, sidebarLinks }: SidebarProps) => (
-    <aside tw="fixed top-0 left-0 z-40 bg-gray-800 lg:w-96 md:w-80 md:h-screen h-80 w-full">
-            <div tw="md:absolute md:bottom-5 w-full h-full md:h-fit flex flex-col justify-center items-center self-center">
-                <div tw="flex flex-col mb-5">
-                    <span tw="text-7xl font-bold text-gray-100 font-abril">
+    <aside className="fixed top-0 left-0 z-40 bg-gray-800 lg:w-96 md:w-80 md:h-screen h-80 w-full">
+            <div className="md:absolute md:bottom-5 w-full h-full md:h-fit flex flex-col justify-center items-center self-center">
+                <div className="flex flex-col mb-5">
+                    <span className="text-7xl font-bold text-gray-100 font-abril">
                         <Link href="/">{blogName}</Link>
                     </span>
-                    <span tw="text-2xl my-3 text-gray-400">{description}</span>
+                    <span className="text-2xl my-3 text-gray-400">{description}</span>
                 </div>
                 <ul>
                     {sidebarLinks.map((link, index) => (
-                        <li tw="text-xl text-gray-100" key={index}>
+                        <li className="text-xl text-gray-100" key={index}>
                             <Link href={link.href}>{link.title}</Link>
                         </li>
                     ))}
                 </ul>
-                <span tw="text-2xl mt-4 mb-2 text-gray-400">{blogAuthor}</span>
-                <div tw="flex w-full justify-center items-center  text-gray-100">
+                <span className="text-2xl mt-4 mb-2 text-gray-400">{blogAuthor}</span>
+                <div className="flex w-full justify-center items-center text-gray-100">
                     <a href={linkedinPage}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            tw="md:h-6 md:w-6 h-5 w-5 mr-4"
+                            className="md:h-6 md:w-6 h-5 w-5 mr-4"
                             fill="currentColor"
                             viewBox="0 0 24 24">
                             <path
@@ -47,7 +47,7 @@ const Sidebar = ({ blogName, description, blogAuthor, linkedinPage, githubPage, 
                     <a href={githubPage}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            tw="md:h-6 md:w-6 h-5 w-5"
+                            className="md:h-6 md:w-6 h-5 w-5"
                             fill="currentColor"
                             viewBox="0 0 24 24">
                             <path

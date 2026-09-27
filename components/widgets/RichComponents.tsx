@@ -24,9 +24,9 @@ interface CodeProps {
 export const RichTextComponents: Partial<PortableTextReactComponents> = {
     block: {
         h1: ({ children }) => (
-            <h1 tw="text-4xl font-bold text-gray-800 mb-6">{children}</h1>
+            <h1 className="text-4xl font-bold text-gray-800 mb-6">{children}</h1>
         ),
-        normal: ({ children }) => <p tw="text-xl my-3">{children}</p>,
+        normal: ({ children }) => <p className="text-xl my-3">{children}</p>,
     },
     types: {
         codeField: ({ value }: CodeProps) => {

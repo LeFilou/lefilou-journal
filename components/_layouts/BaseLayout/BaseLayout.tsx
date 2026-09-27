@@ -18,7 +18,7 @@ const BaseLayout = ({ children }: BaseLayoutProps) => (
                 { title: 'About', href: '/about' },
             ]}
         />
-        <main tw="lg:ml-96 md:ml-80 md:mt-0 mt-80 ml-0 p-10 md:py-20 md:px-36">
+        <main className="lg:ml-96 md:ml-80 md:mt-0 mt-80 ml-0 p-10 md:py-20 md:px-36">
             {children}
         </main>
     </>
