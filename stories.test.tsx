@@ -10,6 +10,7 @@ const storyFiles = globSync('components/**/*.stories.tsx', { cwd: __dirname });
 
 describe.each(storyFiles)('%s', (file) => {
     const stories: [string, ComponentType][] = Object.entries(
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
         composeStories(require(path.join(__dirname, file)) as StoryFile),
     );
 
