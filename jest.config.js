@@ -8,6 +8,6 @@ module.exports = createJestConfig({
     coveragePathIgnorePatterns: ['<rootDir>/(node_modules|.next|.storybook)/'],
     setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
     moduleNameMapper: {
-        '^@/(components|model|styles)/(.*)$': '<rootDir>/$1/$2',
+        '^@/(.*)$': '<rootDir>/$1',
     },
 });
