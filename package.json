@@ -23,7 +23,7 @@
     "@portabletext/react": "^3.0.11",
     "@sanity/code-input": "^4.1.2",
     "@sanity/vision": "^3.21.3",
-    "next": "latest",
+    "next": "14.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-refractor": "^2.1.7",
@@ -87,5 +87,8 @@
     "semi": true,
     "quoteProps": "consistent",
     "tabWidth": 4
+  },
+  "engines": {
+    "node": ">=22"
   }
 }
