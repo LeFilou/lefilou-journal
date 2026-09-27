@@ -7,7 +7,6 @@ const meta = {
     component: PostSummary,
     parameters: {
         layout: 'fullscreen',
-        storyshots: true,
     },
 };
 

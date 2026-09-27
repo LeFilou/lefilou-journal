@@ -6,7 +6,6 @@ const meta: Meta<typeof Sidebar> = {
     component: Sidebar,
     parameters: {
         layout: 'fullscreen',
-        storyshots: true,
     },
 };
 

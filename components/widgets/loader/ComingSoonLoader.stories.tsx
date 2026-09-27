@@ -6,7 +6,6 @@ const meta: Meta<typeof ComingSoonLoader> = {
     component: ComingSoonLoader,
     parameters: {
         layout: 'fullscreen',
-        storyshots: true,
     },
 };
 
