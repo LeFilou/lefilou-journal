@@ -16,43 +16,35 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
-    "@portabletext/react": "^3.0.11",
-    "@sanity/code-input": "^4.1.2",
-    "@sanity/vision": "^3.21.3",
+    "@portabletext/react": "^8.0.1",
+    "@portabletext/types": "^4.0.2",
+    "@sanity/client": "^8.7.0",
     "next": "^16.3.6",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
-    "react-refractor": "^2.1.7",
-    "sanity": "^3.21.3",
-    "styled-components": "^6.1.1"
+    "react-refractor": "^4.0.0",
+    "refractor": "^5.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",
-    "@storybook/addon-actions": "^7.6.5",
-    "@storybook/addon-essentials": "^7.6.5",
-    "@storybook/addon-interactions": "^7.6.5",
-    "@storybook/addon-links": "^7.6.5",
-    "@storybook/addon-onboarding": "^1.0.10",
-    "@storybook/blocks": "^7.6.5",
-    "@storybook/nextjs": "^7.6.5",
-    "@storybook/react": "^7.6.5",
-    "@storybook/testing-library": "^0.2.2",
+    "@storybook/addon-docs": "^10.6.0",
+    "@storybook/addon-links": "^10.6.0",
+    "@storybook/nextjs": "^10.6.0",
     "@tailwindcss/postcss": "^4.3.3",
-    "@testing-library/dom": "^9.3.3",
-    "@testing-library/jest-dom": "^6.1.5",
-    "@testing-library/react": "^14.1.2",
-    "@testing-library/user-event": "^14.5.1",
-    "@types/jest": "^29.5.11",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
     "@types/node": "^22.20.4",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "@types/refractor": "^3.4.0",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.3.6",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
+    "jest": "^30.5.2",
+    "jest-environment-jsdom": "^30.5.2",
     "prettier": "^3.1.1",
-    "storybook": "^7.6.5",
+    "storybook": "^10.6.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^5.3.3",
     "typescript-eslint": "^8.70.1"
@@ -64,6 +56,6 @@
     "tabWidth": 4
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=22.12"
   }
 }

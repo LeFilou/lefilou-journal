@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/nextjs';
 import ComingSoonLoader from './ComingSoonLoader';
 
 const meta: Meta<typeof ComingSoonLoader> = {

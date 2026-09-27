@@ -1,6 +1,6 @@
 import { getClient } from '../../lib/sanity.server';
 import { postBySlugQuery, postSlugsQuery } from '../../lib/queries';
-import { PortableTextBlock } from '@sanity/types';
+import { PortableTextBlock } from '@portabletext/types';
 import { PortableText } from '@portabletext/react';
 import { Post as PostSummary } from '@/model/Post';
 import { RichTextComponents } from '@/components/widgets/RichComponents';

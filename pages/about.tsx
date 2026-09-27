@@ -1,6 +1,6 @@
 import { getClient } from '../lib/sanity.server';
 import { PortableText } from '@portabletext/react';
-import { PortableTextBlock } from '@sanity/types';
+import { PortableTextBlock } from '@portabletext/types';
 import { GetStaticProps } from 'next';
 import { aboutQuery } from '../lib/queries';
 import { RichTextComponents } from '@/components/widgets/RichComponents';
