@@ -15,9 +15,8 @@ type Story = StoryObj<typeof Sidebar>;
 
 export const Primary: Story = {};
 Primary.args = {
-    blogName: 'Lefilou',
-    blogAuthor: 'Salim Fliou',
-    description: "Lefilou's personnal journal",
+    blogName: 'Salim Fliou',
+    description: 'Journal',
     sidebarLinks: [
         { title: 'Home', href: '/' },
         { title: 'About', href: '/about' },

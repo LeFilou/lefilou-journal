@@ -9,18 +9,17 @@ export interface SidebarLink {
 
 export interface SidebarProps {
     blogName: string;
-    blogAuthor: string;
     description: string;
     sidebarLinks: SidebarLink[];
     githubPage: string;
     linkedinPage: string;
 }
 
-const Sidebar = ({ blogName, description, blogAuthor, linkedinPage, githubPage, sidebarLinks }: SidebarProps) => (
+const Sidebar = ({ blogName, description, linkedinPage, githubPage, sidebarLinks }: SidebarProps) => (
     <aside className="fixed top-0 left-0 z-40 bg-gray-800 lg:w-96 md:w-80 md:h-screen h-80 w-full">
             <div className="md:absolute md:bottom-5 w-full h-full md:h-fit flex flex-col justify-center items-center self-center">
                 <div className="flex flex-col mb-5">
-                    <span className="text-7xl font-bold text-gray-100 font-abril">
+                    <span className="text-5xl lg:text-6xl font-bold text-gray-100 font-abril">
                         <Link href="/">{blogName}</Link>
                     </span>
                     <span className="text-2xl my-3 text-gray-400">{description}</span>
@@ -32,8 +31,7 @@ const Sidebar = ({ blogName, description, blogAuthor, linkedinPage, githubPage, 
                         </li>
                     ))}
                 </ul>
-                <span className="text-2xl mt-4 mb-2 text-gray-400">{blogAuthor}</span>
-                <div className="flex w-full justify-center items-center text-gray-100">
+                <div className="flex w-full mt-6 justify-center items-center text-gray-100">
                     <a href={linkedinPage}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
