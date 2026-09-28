@@ -22,7 +22,7 @@ Primary.args = {
                 'Consequat interdum varius sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus ' +
                 'accumsan tortor posuere ac ut consequat semper.',
             slug: 'lorem-ipsum',
-            createdAt: '2023-01-24T14:03:47Z',
+            publishedAt: '2023-01-24T14:03:47Z',
         },
         {
             title: 'Dolor Sit Amet',
@@ -30,8 +30,8 @@ Primary.args = {
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ' +
                 'labore et dolore magna aliqua. Neque vitae tempus quam pellentesque nec nam aliquam sem. Aliquam ' +
                 'eleifend mi in nulla posuere.',
-            slug: 'lorem-ipsum',
-            createdAt: '2023-01-24T14:03:47Z',
-        }
+            slug: 'dolor-sit-amet',
+            publishedAt: '2023-01-24T14:03:47Z',
+        },
     ],
 };

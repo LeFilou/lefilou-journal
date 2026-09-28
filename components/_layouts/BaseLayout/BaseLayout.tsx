@@ -8,9 +8,8 @@ export interface BaseLayoutProps {
 const BaseLayout = ({ children }: BaseLayoutProps) => (
     <>
         <Sidebar
-            blogName="Lefilou"
-            blogAuthor="Salim Fliou"
-            description="Lefilou's personal journal"
+            blogName="Salim Fliou"
+            description="Journal"
             githubPage="https://github.com/LeFilou"
             linkedinPage="https://www.linkedin.com/in/salim-fliou/"
             sidebarLinks={[

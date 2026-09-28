@@ -2,11 +2,11 @@ const postFields = `
   _id,
   title,
   summary,
-  "createdAt": _createdAt,
+  "publishedAt": coalesce(publishedAt, _createdAt),
   "slug": slug.current
 `;
 export const indexQuery = `
-*[_type == "post"] {
+*[_type == "post" && defined(slug.current)] | order(coalesce(publishedAt, _createdAt) desc) {
     ${postFields}
 }
 `;
@@ -21,6 +21,13 @@ export const postSlugsQuery = `
 
 export const postBySlugQuery = `
 *[_type == "post" && slug.current == $slug][0] {
-  ${postFields}, "author": author->name, body
+  ${postFields}, "author": author->name, "mainImage": mainImage.asset->url, body
+}
+`;
+
+export const sitemapQuery = `
+*[_type == "post" && defined(slug.current)] {
+  "slug": slug.current,
+  "updatedAt": _updatedAt
 }
 `;

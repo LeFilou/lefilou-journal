@@ -1,38 +1,89 @@
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { getClient } from '../../lib/sanity.server';
 import { postBySlugQuery, postSlugsQuery } from '../../lib/queries';
 import { PortableTextBlock } from '@portabletext/types';
-import { PortableText } from '@portabletext/react';
-import { Post as PostSummary } from '@/model/Post';
+import {
+    PortableText,
+    PortableTextBlockComponent,
+    PortableTextReactComponents,
+} from '@portabletext/react';
+import { Post } from '@/model/Post';
 import { RichTextComponents } from '@/components/widgets/RichComponents';
+import Seo from '@/components/widgets/seo/Seo';
+import { formatDate } from '@/lib/date';
 
-const Post = (props) => {
-    const { title = 'Missing title', body } = props.post;
+interface PostDetails extends Post {
+    author?: string;
+    mainImage?: string;
+    body: PortableTextBlock[];
+}
+
+interface PostPageProps {
+    post: PostDetails;
+}
+
+// The post title is the page's only <h1>, so headings from the body start at <h2>
+const postComponents: Partial<PortableTextReactComponents> = {
+    ...RichTextComponents,
+    block: {
+        ...(RichTextComponents.block as Record<
+            string,
+            PortableTextBlockComponent
+        >),
+        h1: ({ children }) => (
+            <h2 className="text-4xl font-bold text-gray-800 mb-6">
+                {children}
+            </h2>
+        ),
+    },
+};
+
+const PostPage = ({ post }: PostPageProps) => {
+    const {
+        title = 'Missing title',
+        summary,
+        slug,
+        publishedAt,
+        mainImage,
+        body,
+    } = post;
     return (
-        <div>
+        <article>
+            <Seo
+                title={title}
+                description={summary}
+                path={`/post/${slug}`}
+                image={mainImage && `${mainImage}?w=1200&h=630&fit=crop`}
+                publishedAt={publishedAt}
+            />
             <h1 className="text-4xl text-gray-800 font-bold">{title}</h1>
-            <PortableText value={body} components={RichTextComponents} />
-        </div>
+            <time
+                dateTime={publishedAt}
+                className="block text-lg text-gray-400 mb-6"
+            >
+                {formatDate(publishedAt)}
+            </time>
+            <PortableText value={body} components={postComponents} />
+        </article>
     );
 };
 
-export async function getStaticPaths() {
-    const paths = await getClient().fetch(postSlugsQuery);
+export const getStaticPaths: GetStaticPaths = async () => {
+    const slugs: string[] = await getClient().fetch(postSlugsQuery);
     return {
-        paths: paths.map((slug) => ({ params: { slug } })),
+        paths: slugs.map((slug) => ({ params: { slug } })),
         fallback: false,
     };
-}
+};
 
-type PostProps = PostSummary & PortableTextBlock;
+export const getStaticProps: GetStaticProps<PostPageProps> = async (
+    context,
+) => {
+    const slug = context.params?.slug ?? '';
+    const post: PostDetails = await getClient().fetch(postBySlugQuery, {
+        slug,
+    });
+    return { props: { post } };
+};
 
-export async function getStaticProps(context) {
-    const { slug = '' } = context.params;
-    const post: PostProps = await getClient().fetch(postBySlugQuery, { slug });
-    return {
-        props: {
-            post,
-        },
-    };
-}
-
-export default Post;
+export default PostPage;
