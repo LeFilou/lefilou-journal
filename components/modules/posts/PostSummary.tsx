@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { formatDate } from '@/lib/date';
 
 export interface PostSummaryProps {
     title: string;
@@ -7,17 +8,21 @@ export interface PostSummaryProps {
     slug: string;
 }
 
-const PostSummary = ({ title, publishedAt, summary, slug }: PostSummaryProps) => {
-    const link = `post/${slug}`
-    return (
-        <div className="p-5">
-            <h1 className="text-4xl text-gray-800 font-bold">
-                <Link href={link}>{title}</Link>
-            </h1>
-            <span className="text-lg text-gray-400">{publishedAt}</span>
-            <p className="text-xl text-gray-700 mt-4">{summary}</p>
-        </div>
-    );
-};
+const PostSummary = ({
+    title,
+    publishedAt,
+    summary,
+    slug,
+}: PostSummaryProps) => (
+    <article className="p-5">
+        <h2 className="text-4xl text-gray-800 font-bold">
+            <Link href={`/post/${slug}`}>{title}</Link>
+        </h2>
+        <time dateTime={publishedAt} className="text-lg text-gray-400">
+            {formatDate(publishedAt)}
+        </time>
+        <p className="text-xl text-gray-700 mt-4">{summary}</p>
+    </article>
+);
 
 export default PostSummary;
