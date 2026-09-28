@@ -18,11 +18,16 @@ export interface SidebarProps {
 const Sidebar = ({ blogName, description, linkedinPage, githubPage, sidebarLinks }: SidebarProps) => (
     <aside className="fixed top-0 left-0 z-40 bg-gray-800 lg:w-96 md:w-80 md:h-screen h-80 w-full">
             <div className="md:absolute md:bottom-5 w-full h-full md:h-fit flex flex-col justify-center items-center self-center">
-                <div className="flex flex-col mb-5">
+                <div className="flex flex-col items-center text-center mb-6">
                     <span className="text-5xl lg:text-6xl font-bold text-gray-100 font-abril">
                         <Link href="/">{blogName}</Link>
                     </span>
-                    <span className="text-2xl my-3 text-gray-400">{description}</span>
+                    <span className="mt-4 flex items-center gap-3 text-lg uppercase tracking-[0.3em] text-gray-400">
+                        <span className="h-px w-10 bg-gray-500" aria-hidden="true" />
+                        {/* cancel the letter-spacing added after the last letter */}
+                        <span className="-mr-[0.3em]">{description}</span>
+                        <span className="h-px w-10 bg-gray-500" aria-hidden="true" />
+                    </span>
                 </div>
                 <ul>
                     {sidebarLinks.map((link, index) => (
