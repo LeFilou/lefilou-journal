@@ -48,7 +48,7 @@ const PostPage = ({ post }: PostPageProps) => {
         body,
     } = post;
     return (
-        <article className="max-w-3xl">
+        <article className="break-words">
             <Seo
                 title={title}
                 description={summary}

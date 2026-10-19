@@ -16,7 +16,7 @@ export interface SidebarProps {
 }
 
 const Sidebar = ({ blogName, description, linkedinPage, githubPage, sidebarLinks }: SidebarProps) => (
-    <aside className="fixed top-0 left-0 z-40 bg-gray-800 lg:w-96 md:w-80 md:h-screen h-80 w-full">
+    <aside className="absolute md:fixed top-0 left-0 z-40 bg-gray-800 lg:w-96 md:w-80 md:h-screen h-80 w-full">
             <div className="md:absolute md:bottom-5 w-full h-full md:h-fit flex flex-col justify-center items-center self-center">
                 <div className="flex flex-col items-center text-center mb-6">
                     <span className="text-5xl lg:text-6xl font-bold text-gray-100 font-abril">
