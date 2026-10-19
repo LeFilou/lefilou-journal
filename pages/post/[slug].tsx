@@ -31,7 +31,7 @@ const postComponents: Partial<PortableTextReactComponents> = {
             PortableTextBlockComponent
         >),
         h1: ({ children }) => (
-            <h2 className="text-4xl font-bold text-gray-800 mb-6">
+            <h2 className="mt-14 mb-4 text-3xl font-bold tracking-tight text-gray-900">
                 {children}
             </h2>
         ),
@@ -48,7 +48,7 @@ const PostPage = ({ post }: PostPageProps) => {
         body,
     } = post;
     return (
-        <article>
+        <article className="max-w-3xl">
             <Seo
                 title={title}
                 description={summary}
@@ -56,10 +56,12 @@ const PostPage = ({ post }: PostPageProps) => {
                 image={mainImage && `${mainImage}?w=1200&h=630&fit=crop`}
                 publishedAt={publishedAt}
             />
-            <h1 className="text-4xl text-gray-800 font-bold">{title}</h1>
+            <h1 className="text-4xl font-bold leading-tight tracking-tight text-gray-900 md:text-5xl">
+                {title}
+            </h1>
             <time
                 dateTime={publishedAt}
-                className="block text-lg text-gray-400 mb-6"
+                className="mt-4 mb-10 block border-b border-gray-200 pb-8 text-sm uppercase tracking-widest text-gray-400"
             >
                 {formatDate(publishedAt)}
             </time>
